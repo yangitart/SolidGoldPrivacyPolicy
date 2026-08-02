@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Privacy and security policy for Solid Gold Rich. The app keeps your net worth on your device and does not collect or share personal data.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy & Security | Solid Gold Rich">
+  <meta property="og:description" content="Your wealth stays on your device. No accounts, ads, analytics, or data sharing.">
+  <link rel="icon" type="image/png" href="assets/solid-gold-rich-icon.png">
+  <title>Privacy & Security | Solid Gold Rich</title>
+
+  <style>
+    :root {
+      --black: #050505;
+      --black-soft: #0b0a08;
+      --panel: #10100e;
+      --panel-high: #15130f;
+      --gold: #e8bd62;
+      --gold-bright: #ffe2a0;
+      --gold-deep: #8e6726;
+      --cream: #f7f0df;
+      --text: #e9e3d5;
+      --muted: #aaa293;
+      --line: rgba(232, 189, 98, 0.20);
+      --line-soft: rgba(255, 255, 255, 0.08);
+      --green: #9bd9b2;
+      --max-width: 1120px;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 72% -12%, rgba(232, 189, 98, 0.10), transparent 34rem),
+        var(--black);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--gold-bright);
+      text-underline-offset: 0.22em;
+      text-decoration-thickness: 1px;
+    }
+
+    a:hover {
+      color: #fff2ca;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      width: min(calc(100% - 2.5rem), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid var(--line-soft);
+      background: rgba(5, 5, 5, 0.82);
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: var(--cream);
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(232, 189, 98, 0.34);
+      border-radius: 12px;
+      box-shadow: 0 0 24px rgba(232, 189, 98, 0.14);
+    }
+
+    .brand-copy {
+      display: grid;
+      line-height: 1.15;
+    }
+
+    .brand-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.08rem;
+      letter-spacing: 0.025em;
+    }
+
+    .brand-meta {
+      margin-top: 0.28rem;
+      color: var(--muted);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .topnav {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+
+    .topnav a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .topnav a:hover {
+      color: var(--gold-bright);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      border: 1px solid rgba(232, 189, 98, 0.10);
+      border-radius: 50%;
+    }
+
+    .hero::before {
+      width: 38rem;
+      height: 38rem;
+      right: -14rem;
+      top: -22rem;
+      box-shadow:
+        0 0 0 4rem rgba(232, 189, 98, 0.018),
+        0 0 0 8rem rgba(232, 189, 98, 0.012);
+    }
+
+    .hero::after {
+      width: 18rem;
+      height: 18rem;
+      left: -11rem;
+      bottom: -13rem;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      min-height: 610px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+      align-items: center;
+      gap: clamp(3rem, 8vw, 7rem);
+      padding-block: 6.5rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0 0 1.45rem;
+      color: var(--gold);
+      font-size: 0.73rem;
+      font-weight: 800;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--cream);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.2rem, 7vw, 6.35rem);
+      font-weight: 400;
+    }
+
+    .gold-text {
+      color: var(--gold-bright);
+      text-shadow: 0 0 34px rgba(232, 189, 98, 0.16);
+    }
+
+    .hero-lead {
+      max-width: 650px;
+      margin: 1.6rem 0 0;
+      color: #c8c0b1;
+      font-size: clamp(1.02rem, 2vw, 1.22rem);
+    }
+
+    .trust-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin: 2.1rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .trust-list li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.62rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #d9d0be;
+      background: rgba(232, 189, 98, 0.045);
+      font-size: 0.79rem;
+      font-weight: 700;
+    }
+
+    .trust-list li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .seal {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 350px;
+      isolation: isolate;
+    }
+
+    .seal::before,
+    .seal::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(232, 189, 98, 0.20);
+      border-radius: 50%;
+    }
+
+    .seal::before {
+      width: 390px;
+      height: 390px;
+      background: radial-gradient(circle, rgba(232, 189, 98, 0.11), transparent 67%);
+    }
+
+    .seal::after {
+      width: 318px;
+      height: 318px;
+      border-style: dashed;
+      opacity: 0.55;
+    }
+
+    .seal-card {
+      position: relative;
+      z-index: 1;
+      width: clamp(220px, 22vw, 280px);
+      aspect-ratio: 1 / 1;
+      padding: 12px;
+      border: 1px solid rgba(232, 189, 98, 0.28);
+      border-radius: 42px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(232, 189, 98, 0.02));
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.58), 0 0 55px rgba(232, 189, 98, 0.10);
+    }
+
+    .seal-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      border-radius: 32px;
+    }
+
+    .seal-label {
+      position: absolute;
+      z-index: 2;
+      right: -0.5rem;
+      bottom: 2.5rem;
+      min-width: 162px;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(10, 9, 7, 0.90);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .seal-label strong,
+    .seal-label span {
+      display: block;
+    }
+
+    .seal-label strong {
+      color: var(--gold-bright);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.97rem;
+      font-weight: 400;
+    }
+
+    .seal-label span {
+      margin-top: 0.15rem;
+      color: var(--muted);
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .snapshot-wrap {
+      border-bottom: 1px solid var(--line-soft);
+      background: linear-gradient(180deg, #080806, #050505);
+    }
+
+    .snapshot {
+      padding-block: 5.4rem;
+    }
+
+    .section-kicker {
+      margin: 0 0 0.8rem;
+      color: var(--gold);
+      font-size: 0.70rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .snapshot-heading {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 400;
+    }
+
+    .snapshot-intro {
+      max-width: 690px;
+      margin: 1rem 0 0;
+      color: var(--muted);
+    }
+
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 2.4rem;
+      overflow: hidden;
+      border: 1px solid var(--line-soft);
+      border-radius: 18px;
+      background: var(--line-soft);
+      box-shadow: var(--shadow);
+    }
+
+    .snapshot-card {
+      min-height: 182px;
+      padding: 1.35rem;
+      background: var(--panel);
+    }
+
+    .snapshot-card .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--green);
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .snapshot-card .status::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 12px rgba(155, 217, 178, 0.45);
+    }
+
+    .snapshot-card strong {
+      display: block;
+      margin-top: 2.2rem;
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.16rem;
+      font-weight: 400;
+    }
+
+    .snapshot-card p {
+      margin: 0.35rem 0 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.55;
+    }
+
+    .policy-area {
+      padding-block: 6rem;
+    }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      gap: clamp(3rem, 8vw, 7rem);
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 2rem;
+    }
+
+    .toc-title {
+      margin: 0 0 1.1rem;
+      color: var(--cream);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .toc ol {
+      display: grid;
+      gap: 0.15rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: contents;
+    }
+
+    .toc li {
+      counter-increment: contents;
+    }
+
+    .toc a {
+      display: grid;
+      grid-template-columns: 1.7rem 1fr;
+      gap: 0.35rem;
+      padding: 0.56rem 0;
+      border-bottom: 1px solid transparent;
+      color: #8f887b;
+      font-size: 0.84rem;
+      line-height: 1.4;
+      text-decoration: none;
+    }
+
+    .toc a::before {
+      content: counter(contents, decimal-leading-zero);
+      color: var(--gold-deep);
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      transform: translateY(0.12rem);
+    }
+
+    .toc a:hover {
+      color: var(--gold-bright);
+      border-bottom-color: var(--line);
+    }
+
+    .document-header {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .document-header h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 5vw, 3.8rem);
+      font-weight: 400;
+    }
+
+    .document-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .document-meta strong {
+      color: #d8d0c0;
+      font-weight: 650;
+    }
+
+    .policy-section {
+      scroll-margin-top: 2rem;
+      padding-block: 3rem;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .policy-section:last-child {
+      border-bottom: 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 2.3rem 1fr;
+      gap: 0.8rem;
+      align-items: baseline;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-number {
+      color: var(--gold-deep);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .section-heading h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.55rem, 4vw, 2.15rem);
+      font-weight: 400;
+    }
+
+    .policy-section > p,
+    .policy-section > ul,
+    .policy-section > .callout,
+    .policy-section > .data-list {
+      margin-left: 3.1rem;
+    }
+
+    .policy-section p {
+      color: #bcb4a6;
+    }
+
+    .policy-section > p {
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .policy-section strong {
+      color: var(--cream);
+      font-weight: 650;
+    }
+
+    .policy-section ul {
+      padding-left: 1.15rem;
+      color: #bcb4a6;
+    }
+
+    .policy-section li {
+      margin-block: 0.55rem;
+      padding-left: 0.3rem;
+    }
+
+    .policy-section li::marker {
+      color: var(--gold);
+    }
+
+    .callout {
+      margin-top: 1.35rem;
+      margin-bottom: 1.35rem;
+      padding: 1.15rem 1.25rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(232, 189, 98, 0.075), rgba(232, 189, 98, 0.018));
+    }
+
+    .callout p {
+      margin: 0;
+      color: #d5ccbb;
+      font-size: 0.92rem;
+    }
+
+    .data-list {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1.4rem;
+    }
+
+    .data-row {
+      display: grid;
+      grid-template-columns: minmax(150px, 0.36fr) minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1rem 1.05rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.018);
+    }
+
+    .data-row strong {
+      font-size: 0.88rem;
+    }
+
+    .data-row span {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .contact-card {
+      margin: 1.5rem 0 0 3.1rem;
+      padding: clamp(1.35rem, 4vw, 2rem);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(232, 189, 98, 0.12), transparent 18rem),
+        var(--panel-high);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card p {
+      margin: 0;
+    }
+
+    .contact-card .contact-title {
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+    }
+
+    .contact-card a {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 1.3rem;
+      padding: 0.72rem 1rem;
+      border: 1px solid rgba(232, 189, 98, 0.35);
+      border-radius: 10px;
+      color: #181208;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      font-size: 0.79rem;
+      font-weight: 850;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      color: #050505;
+      filter: brightness(1.06);
+    }
+
+    footer {
+      border-top: 1px solid var(--line-soft);
+      background: #040404;
+    }
+
+    .footer-inner {
+      min-height: 128px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      color: #777166;
+      font-size: 0.75rem;
+    }
+
+    .footer-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: #a29a8b;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.9rem;
+    }
+
+    .footer-mark::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+      box-shadow: 0 0 10px rgba(232, 189, 98, 0.2);
+    }
+
+    @media (max-width: 940px) {
+      .snapshot-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .policy-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--line-soft);
+      }
+
+      .toc ol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 2rem;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(calc(100% - 1.5rem), var(--max-width));
+      }
+
+      .topbar-inner {
+        min-height: 70px;
+      }
+
+      .topnav {
+        display: none;
+      }
+
+      .hero-grid {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding-block: 4.8rem 3.8rem;
+      }
+
+      .seal {
+        min-height: 300px;
+      }
+
+      .seal::before {
+        width: 310px;
+        height: 310px;
+      }
+
+      .seal::after {
+        width: 250px;
+        height: 250px;
+      }
+
+      .seal-card {
+        width: 210px;
+        border-radius: 36px;
+      }
+
+      .seal-card img {
+        border-radius: 27px;
+      }
+
+      .seal-label {
+        right: 0;
+      }
+
+      .snapshot,
+      .policy-area {
+        padding-block: 4.2rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      h1 {
+        font-size: clamp(3.05rem, 17vw, 4.6rem);
+      }
+
+      .snapshot-grid,
+      .toc ol {
+        grid-template-columns: 1fr;
+      }
+
+      .snapshot-card {
+        min-height: 148px;
+      }
+
+      .snapshot-card strong {
+        margin-top: 1.45rem;
+      }
+
+      .policy-section > p,
+      .policy-section > ul,
+      .policy-section > .callout,
+      .policy-section > .data-list {
+        margin-left: 0;
+      }
+
+      .section-heading {
+        grid-template-columns: 1.9rem 1fr;
+        gap: 0.4rem;
+      }
+
+      .data-row {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+      }
+
+      .contact-card {
+        margin-left: 0;
+      }
+
+      .contact-card a {
+        width: 100%;
+        justify-content: center;
+        overflow-wrap: anywhere;
+      }
+
+      .footer-inner {
+        min-height: 145px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.65rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand img {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+      }
+
+      .brand-name {
+        font-size: 0.96rem;
+      }
+
+      .brand-meta {
+        font-size: 0.58rem;
+        letter-spacing: 0.12em;
+      }
+
+      h1 {
+        font-size: 2.85rem;
+      }
+
+      .trust-list li {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .seal {
+        min-height: 275px;
+      }
+
+      .seal-label {
+        bottom: 1rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top" aria-label="Solid Gold Rich privacy policy home">
+        <img src="assets/solid-gold-rich-icon.png" alt="" width="42" height="42">
+        <span class="brand-copy">
+          <span class="brand-name">Solid Gold Rich</span>
+          <span class="brand-meta">Privacy &amp; Security</span>
+        </span>
+      </a>
+
+      <nav class="topnav" aria-label="Primary navigation">
+        <a href="#summary">Data summary</a>
+        <a href="#policy">Full policy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Privacy by design</p>
+          <h1 id="page-title">Your wealth stays <span class="gold-text">yours.</span></h1>
+          <p class="hero-lead">Solid Gold Rich is a private, offline entertainment app. The net worth you enter stays on your device—never uploaded, sold, shared, or used for advertising.</p>
+
+          <ul class="trust-list" aria-label="Privacy highlights">
+            <li>No account</li>
+            <li>No ads or analytics</li>
+            <li>No data transmission</li>
+          </ul>
+        </div>
+
+        <div class="seal" aria-label="Solid Gold Rich app identity">
+          <div class="seal-card">
+            <img src="assets/solid-gold-rich-icon.png" alt="Solid Gold Rich app icon" width="512" height="512">
+          </div>
+          <div class="seal-label">
+            <strong>Private by default</strong>
+            <span>Local device storage</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="snapshot-wrap" id="summary" aria-labelledby="summary-title">
+      <div class="container snapshot">
+        <p class="section-kicker">Google Play data safety</p>
+        <h2 class="snapshot-heading" id="summary-title">Privacy at a glance</h2>
+        <p class="snapshot-intro">For Google Play disclosure purposes, “collected” means data transmitted away from the user’s device. Solid Gold Rich does not transmit user data off the device.</p>
+
+        <div class="snapshot-grid">
+          <article class="snapshot-card">
+            <span class="status">None</span>
+            <strong>Data collected</strong>
+            <p>No personal or financial data is sent to us.</p>
+          </article>
+          <article class="snapshot-card">
+            <span class="status">None</span>
+            <strong>Data shared</strong>
+            <p>No user data is shared with third parties.</p>
+          </article>
+          <article class="snapshot-card">
+            <span class="status">Not included</span>
+            <strong>Internet access</strong>
+            <p>The Android app blocks the Internet permission.</p>
+          </article>
+          <article class="snapshot-card">
+            <span class="status">Not used</span>
+            <strong>Ads &amp; tracking</strong>
+            <p>No ads, analytics SDKs, or tracking identifiers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="policy-area" id="policy" aria-labelledby="policy-title">
+      <div class="container policy-layout">
+        <aside class="toc" aria-label="Policy contents">
+          <p class="toc-title">In this policy</p>
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#data-handled">Data handled on-device</a></li>
+            <li><a href="#not-collected">Data we do not collect</a></li>
+            <li><a href="#permissions">Permissions &amp; network</a></li>
+            <li><a href="#storage">Storage &amp; security</a></li>
+            <li><a href="#sharing">Sharing, sale &amp; ads</a></li>
+            <li><a href="#deletion">Retention &amp; deletion</a></li>
+            <li><a href="#children">Children’s privacy</a></li>
+            <li><a href="#changes">Policy changes</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </aside>
+
+        <article>
+          <header class="document-header">
+            <p class="section-kicker">Official document</p>
+            <h2 id="policy-title">Privacy &amp; Security Policy</h2>
+            <div class="document-meta">
+              <span>Last updated: <strong>August 2, 2026</strong></span>
+            </div>
+          </header>
+
+          <section class="policy-section" id="overview">
+            <div class="section-heading">
+              <span class="section-number">01</span>
+              <h3>Overview</h3>
+            </div>
+            <p>This Privacy &amp; Security Policy explains how information is handled in the Android application <strong>Solid Gold Rich</strong>.</p>
+            <p>Solid Gold Rich is an entertainment app that displays a premium wealth card and changes its virtual diamond according to the net worth entered by the user. It is designed to work privately and offline.</p>
+            <div class="callout">
+              <p><strong>In short:</strong> we do not receive your net worth or any other personal data. The app has no account system, backend server, advertising, or analytics service.</p>
+            </div>
+          </section>
+
+          <section class="policy-section" id="data-handled">
+            <div class="section-heading">
+              <span class="section-number">02</span>
+              <h3>Data handled on-device</h3>
+            </div>
+            <p>The app processes a small amount of information locally to provide its features. This information does not leave your device.</p>
+
+            <div class="data-list">
+              <div class="data-row">
+                <strong>Net worth value</strong>
+                <span>The number you enter is saved in the app’s private local storage so it remains available the next time you open the app. Entering a new number replaces the previous value.</span>
+              </div>
+              <div class="data-row">
+                <strong>Device language</strong>
+                <span>The app reads only the phone’s configured language code to select English, Spanish, Portuguese, French, German, or Italian. It does not use GPS or infer your physical location.</span>
+              </div>
+              <div class="data-row">
+                <strong>Certificate serial</strong>
+                <span>A random decorative serial number is generated locally for the on-screen certificate during an app session. It is not an account identifier and is not transmitted.</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="policy-section" id="not-collected">
+            <div class="section-heading">
+              <span class="section-number">03</span>
+              <h3>Data we do not collect</h3>
+            </div>
+            <p>Solid Gold Rich does not collect or transmit:</p>
+            <ul>
+              <li>your name, email address, phone number, or physical address;</li>
+              <li>bank account, card, payment, or transaction information;</li>
+              <li>the net worth value entered in the app;</li>
+              <li>precise or approximate location;</li>
+              <li>contacts, photos, videos, files, camera, or microphone data;</li>
+              <li>device or advertising identifiers;</li>
+              <li>usage analytics, diagnostics, or crash reports; or</li>
+              <li>authentication credentials or biometric information.</li>
+            </ul>
+          </section>
+
+          <section class="policy-section" id="permissions">
+            <div class="section-heading">
+              <span class="section-number">04</span>
+              <h3>Permissions &amp; network access</h3>
+            </div>
+            <p>The Android build does not request access to sensitive device capabilities such as location, camera, microphone, contacts, photos, files, or biometrics.</p>
+            <p>The app also explicitly blocks the Android <strong>Internet permission</strong>. As a result, the released Android app is not designed to connect to our servers or transmit the information entered by the user.</p>
+          </section>
+
+          <section class="policy-section" id="storage">
+            <div class="section-heading">
+              <span class="section-number">05</span>
+              <h3>Local storage &amp; security</h3>
+            </div>
+            <p>Your net worth value is stored in the application’s private local storage on your device. Access to that storage is restricted by Android’s application sandbox and by the security protections configured on your device.</p>
+            <p>No method of local storage can be guaranteed to be absolutely secure, especially on a compromised, rooted, or unlocked device. We recommend using a device screen lock and keeping Android security updates current.</p>
+          </section>
+
+          <section class="policy-section" id="sharing">
+            <div class="section-heading">
+              <span class="section-number">06</span>
+              <h3>Sharing, sale &amp; advertising</h3>
+            </div>
+            <p>We do not sell, rent, disclose, or share user information because the app does not transmit user information to us. Solid Gold Rich does not contain advertising SDKs, behavioral tracking, or third-party analytics.</p>
+            <p>The app does not create user profiles and does not use information for targeted advertising or cross-app tracking.</p>
+          </section>
+
+          <section class="policy-section" id="deletion">
+            <div class="section-heading">
+              <span class="section-number">07</span>
+              <h3>Retention &amp; deletion</h3>
+            </div>
+            <p>The net worth value remains in local app storage until you replace it, clear the application’s storage in Android settings, or uninstall the app.</p>
+            <p>Because this information is never sent to us, we do not have a server-side copy and cannot access or delete it remotely. To remove all locally stored information, use <strong>Android Settings → Apps → Solid Gold Rich → Storage → Clear storage</strong>, or uninstall the app.</p>
+          </section>
+
+          <section class="policy-section" id="children">
+            <div class="section-heading">
+              <span class="section-number">08</span>
+              <h3>Children’s privacy</h3>
+            </div>
+            <p>Solid Gold Rich is not designed to collect personal information from children or adults. The app has no account registration, social features, advertising, or transmission of user-entered information.</p>
+            <p>If a parent or guardian has questions about a child’s use of the app, they may contact us using the address below.</p>
+          </section>
+
+          <section class="policy-section" id="changes">
+            <div class="section-heading">
+              <span class="section-number">09</span>
+              <h3>Changes to this policy</h3>
+            </div>
+            <p>We may update this policy if the app’s features or data practices change. Any revised version will be published on this page with a new effective date.</p>
+            <p>If a future version introduces data collection, network features, advertising, analytics, accounts, or new device permissions, this policy and the corresponding Google Play disclosures will be updated before those changes are released.</p>
+          </section>
+
+          <section class="policy-section" id="contact">
+            <div class="section-heading">
+              <span class="section-number">10</span>
+              <h3>Contact</h3>
+            </div>
+            <p>For privacy questions or responsible reports concerning the security of Solid Gold Rich, use the following contact address:</p>
+
+            <div class="contact-card">
+              <p class="contact-title">Privacy &amp; security contact</p>
+              <a href="mailto:escobarpupoyancarlos1@gmail.com">escobarpupoyancarlos1@gmail.com</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-mark">Solid Gold Rich</span>
+      <span>Privacy &amp; Security Policy · Last updated August 2, 2026</span>
+    </div>
+  </footer>
+</body>
+</html>
