@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#050505">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="index, follow">
-  <meta name="description" content="Privacy and security policy for Solid Gold Rich. The app keeps your net worth on your device and does not collect or share personal data.">
+  <meta name="description" content="Privacy and security policy for Solid Gold Rich. Personal finance and store records remain on your device unless you choose to export or share a backup.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Privacy & Security | Solid Gold Rich">
-  <meta property="og:description" content="Your wealth stays on your device. No accounts, ads, analytics, or data sharing.">
+  <meta property="og:description" content="Personal finance and store records remain on your device unless you choose to export or share a backup.">
   <link rel="icon" type="image/png" href="assets/solid-gold-rich-icon.png">
   <title>Privacy & Security | Solid Gold Rich</title>
 
@@ -897,12 +897,13 @@
         <div>
           <p class="eyebrow">Privacy by design</p>
           <h1 id="page-title">Your wealth stays <span class="gold-text">yours.</span></h1>
-          <p class="hero-lead">Solid Gold Rich is a private, offline entertainment app. The net worth you enter stays on your device—never uploaded, sold, shared, or used for advertising.</p>
+          <p class="hero-lead">Solid Gold Rich is a private, local-first app for organizing personal finances and store operations. Your records remain on your device unless you choose to export or share a backup.</p>
 
           <ul class="trust-list" aria-label="Privacy highlights">
             <li>No account</li>
             <li>No ads or analytics</li>
-            <li>No data transmission</li>
+            <li>Local-first storage</li>
+            <li>Export only when you choose</li>
           </ul>
         </div>
 
@@ -922,18 +923,18 @@
       <div class="container snapshot">
         <p class="section-kicker">Google Play data safety</p>
         <h2 class="snapshot-heading" id="summary-title">Privacy at a glance</h2>
-        <p class="snapshot-intro">For Google Play disclosure purposes, “collected” means data transmitted away from the user’s device. Solid Gold Rich does not transmit user data off the device.</p>
+        <p class="snapshot-intro">Solid Gold Rich stores finance and store records locally. Data leaves the app only when you explicitly export or share a backup using the Android share sheet.</p>
 
         <div class="snapshot-grid">
           <article class="snapshot-card">
             <span class="status">None</span>
             <strong>Data collected</strong>
-            <p>No personal or financial data is sent to us.</p>
+            <p>No personal or financial data is sent to us by the app.</p>
           </article>
           <article class="snapshot-card">
             <span class="status">None</span>
             <strong>Data shared</strong>
-            <p>No user data is shared with third parties.</p>
+            <p>The app does not share data automatically with third parties.</p>
           </article>
           <article class="snapshot-card">
             <span class="status">Not included</span>
@@ -943,7 +944,7 @@
           <article class="snapshot-card">
             <span class="status">Not used</span>
             <strong>Ads &amp; tracking</strong>
-            <p>No ads, analytics SDKs, or tracking identifiers.</p>
+            <p>No ads, analytics SDKs, or tracking identifiers are used.</p>
           </article>
         </div>
       </div>
@@ -972,7 +973,8 @@
             <p class="section-kicker">Official document</p>
             <h2 id="policy-title">Privacy &amp; Security Policy</h2>
             <div class="document-meta">
-              <span>Last updated: <strong>August 2, 2026</strong></span>
+              <span>Last updated: <strong>August 16, 2026</strong></span>
+              <span>Android application ID: <strong>com.escobar.solidgold</strong></span>
             </div>
           </header>
 
@@ -982,9 +984,9 @@
               <h3>Overview</h3>
             </div>
             <p>This Privacy &amp; Security Policy explains how information is handled in the Android application <strong>Solid Gold Rich</strong>.</p>
-            <p>Solid Gold Rich is an entertainment app that displays a premium wealth card and changes its virtual diamond according to the net worth entered by the user. It is designed to work privately and offline.</p>
+            <p>Solid Gold Rich is a local-first personal finance and store management app. It is designed to work offline and does not require an account.</p>
             <div class="callout">
-              <p><strong>In short:</strong> we do not receive your net worth or any other personal data. The app has no account system, backend server, advertising, or analytics service.</p>
+              <p><strong>In short:</strong> the app does not send your records to us. It has no account system, backend server, advertising, analytics service, bank connection, or payment-processing service. You control when a backup is exported or shared.</p>
             </div>
           </section>
 
@@ -993,20 +995,28 @@
               <span class="section-number">02</span>
               <h3>Data handled on-device</h3>
             </div>
-            <p>The app processes a small amount of information locally to provide its features. This information does not leave your device.</p>
+            <p>The app processes the following information locally to provide its finance and store features. This information does not leave your device unless you choose to export or share it.</p>
 
             <div class="data-list">
               <div class="data-row">
-                <strong>Net worth value</strong>
-                <span>The number you enter is saved in the app’s private local storage so it remains available the next time you open the app. Entering a new number replaces the previous value.</span>
+                <strong>Finance records</strong>
+                <span>Accounts, currencies, income, expenses, transfers, budgets, recurring operations, debts, savings goals, reminders, notes, categories and settings are saved in local app storage.</span>
               </div>
               <div class="data-row">
-                <strong>Device language</strong>
-                <span>The app reads only the phone’s configured language code to select English, Spanish, Portuguese, French, German, or Italian. It does not use GPS or infer your physical location.</span>
+                <strong>Store records</strong>
+                <span>Products, services, categories, units, inventory, stock movements, sales, clients, employees, payroll details, business cash movements and store reports are saved locally.</span>
               </div>
               <div class="data-row">
-                <strong>Certificate serial</strong>
-                <span>A random decorative serial number is generated locally for the on-screen certificate during an app session. It is not an account identifier and is not transmitted.</span>
+                <strong>Product images</strong>
+                <span>When you choose an image for a product, the image is copied into the app’s local storage so it can be displayed. Product images are embedded in the store JSON backup when you export that backup.</span>
+              </div>
+              <div class="data-row">
+                <strong>Language and PIN</strong>
+                <span>The app reads the phone’s configured language to select a supported translation. An optional PIN is stored as a local hash for the app lock; it is not a remote account password and does not encrypt stored data.</span>
+              </div>
+              <div class="data-row">
+                <strong>Backups</strong>
+                <span>Personal finance data can be exported as JSON or CSV. Store data can be exported as one JSON file, including product images. Imported backups are processed locally.</span>
               </div>
             </div>
           </section>
@@ -1016,16 +1026,16 @@
               <span class="section-number">03</span>
               <h3>Data we do not collect</h3>
             </div>
-            <p>Solid Gold Rich does not collect or transmit:</p>
+            <p>Solid Gold Rich does not automatically collect or transmit to its developer:</p>
             <ul>
-              <li>your name, email address, phone number, or physical address;</li>
-              <li>bank account, card, payment, or transaction information;</li>
-              <li>the net worth value entered in the app;</li>
+              <li>your personal finance records or store records;</li>
+              <li>account names, balances, transactions, sales, clients, employees, or payroll details;</li>
+              <li>product images or other files selected for a store backup;</li>
               <li>precise or approximate location;</li>
-              <li>contacts, photos, videos, files, camera, or microphone data;</li>
+              <li>contacts, camera, microphone, or biometric data;</li>
               <li>device or advertising identifiers;</li>
               <li>usage analytics, diagnostics, or crash reports; or</li>
-              <li>authentication credentials or biometric information.</li>
+              <li>authentication credentials for an online account.</li>
             </ul>
           </section>
 
@@ -1034,8 +1044,8 @@
               <span class="section-number">04</span>
               <h3>Permissions &amp; network access</h3>
             </div>
-            <p>The Android build does not request access to sensitive device capabilities such as location, camera, microphone, contacts, photos, files, or biometrics.</p>
-            <p>The app also explicitly blocks the Android <strong>Internet permission</strong>. As a result, the released Android app is not designed to connect to our servers or transmit the information entered by the user.</p>
+            <p>The Android build does not request access to location, camera, microphone, contacts, or biometric capabilities. Images and backup files are selected through Android’s system document picker.</p>
+            <p>The app explicitly blocks the Android <strong>Internet permission</strong>. It is not designed to connect to our servers or transmit records entered by the user. When you export or share a backup, Android may provide the selected file to the destination you choose.</p>
           </section>
 
           <section class="policy-section" id="storage">
@@ -1043,7 +1053,8 @@
               <span class="section-number">05</span>
               <h3>Local storage &amp; security</h3>
             </div>
-            <p>Your net worth value is stored in the application’s private local storage on your device. Access to that storage is restricted by Android’s application sandbox and by the security protections configured on your device.</p>
+            <p>Your finance records, store records, settings and selected product images are stored in the application’s private local storage on your device. Access to that storage is restricted by Android’s application sandbox and by the security protections configured on your device.</p>
+            <p>The optional PIN is a local access lock. It is not encryption, and the app does not claim that local data is protected against a compromised, rooted, or unlocked device.</p>
             <p>No method of local storage can be guaranteed to be absolutely secure, especially on a compromised, rooted, or unlocked device. We recommend using a device screen lock and keeping Android security updates current.</p>
           </section>
 
@@ -1052,8 +1063,9 @@
               <span class="section-number">06</span>
               <h3>Sharing, sale &amp; advertising</h3>
             </div>
-            <p>We do not sell, rent, disclose, or share user information because the app does not transmit user information to us. Solid Gold Rich does not contain advertising SDKs, behavioral tracking, or third-party analytics.</p>
+            <p>We do not sell, rent, disclose, or share user information because the app does not transmit it to us. Solid Gold Rich does not contain advertising SDKs, behavioral tracking, or third-party analytics.</p>
             <p>The app does not create user profiles and does not use information for targeted advertising or cross-app tracking.</p>
+            <p>If you choose to export or share a JSON or CSV backup, the file is handled by the Android share destination you select. Review that destination’s privacy practices before sending the file.</p>
           </section>
 
           <section class="policy-section" id="deletion">
@@ -1061,8 +1073,9 @@
               <span class="section-number">07</span>
               <h3>Retention &amp; deletion</h3>
             </div>
-            <p>The net worth value remains in local app storage until you replace it, clear the application’s storage in Android settings, or uninstall the app.</p>
-            <p>Because this information is never sent to us, we do not have a server-side copy and cannot access or delete it remotely. To remove all locally stored information, use <strong>Android Settings → Apps → Solid Gold Rich → Storage → Clear storage</strong>, or uninstall the app.</p>
+            <p>Finance records, store records, settings and product images remain in local app storage until you edit or delete them, reset local data from the app’s Settings, clear the application’s storage in Android settings, or uninstall the app.</p>
+            <p>Because this information is not sent to us, we do not have a server-side copy and cannot access or delete it remotely. Exported files may remain wherever you chose to save or share them; delete those files separately.</p>
+            <p>To remove all locally stored information, use the app’s local data reset option or <strong>Android Settings → Apps → Solid Gold Rich → Storage → Clear storage</strong>, or uninstall the app.</p>
           </section>
 
           <section class="policy-section" id="children">
@@ -1070,7 +1083,7 @@
               <span class="section-number">08</span>
               <h3>Children’s privacy</h3>
             </div>
-            <p>Solid Gold Rich is not designed to collect personal information from children or adults. The app has no account registration, social features, advertising, or transmission of user-entered information.</p>
+            <p>Solid Gold Rich is not designed to collect personal information from children or adults. The app has no account registration, social features, advertising, or automatic transmission of user-entered information.</p>
             <p>If a parent or guardian has questions about a child’s use of the app, they may contact us using the address below.</p>
           </section>
 
@@ -1080,7 +1093,7 @@
               <h3>Changes to this policy</h3>
             </div>
             <p>We may update this policy if the app’s features or data practices change. Any revised version will be published on this page with a new effective date.</p>
-            <p>If a future version introduces data collection, network features, advertising, analytics, accounts, or new device permissions, this policy and the corresponding Google Play disclosures will be updated before those changes are released.</p>
+            <p>If a future version introduces data collection, network features, advertising, analytics, accounts, payment processing, or new device permissions, this policy and the corresponding Google Play disclosures will be updated before those changes are released.</p>
           </section>
 
           <section class="policy-section" id="contact">
@@ -1103,7 +1116,7 @@
   <footer>
     <div class="container footer-inner">
       <span class="footer-mark">Solid Gold Rich</span>
-      <span>Privacy &amp; Security Policy · Last updated August 2, 2026</span>
+      <span>Privacy &amp; Security Policy · Last updated August 16, 2026</span>
     </div>
   </footer>
 </body>
